@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Color Changes on Input</title>
+</head>
+<body id="body" style="color: white">
+
+    <form onsubmit="return changeColor()" style="margin: 80px">
+        <input id="colorInput" value="" placeholder="Enter a color name...">
+        <button>Change</button>
+    </form>
+    
+    <script>
+        let inputBox = document.getElementById("colorInput");
+        console.log(inputBox);
+        let body = document.getElementById("body");
+        console.log(body);
+
+        function changeColor(){
+            console.log(`${inputBox.value}`);
+            body.style.backgroundColor = inputBox.value;
+            return false;
+        }
+    </script>
+</body>
+</html>
