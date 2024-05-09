@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Color Changes on Button Click</title>
+</head>
+<body id="body" style="color: white">
+
+    <form onsubmit="return changeColor()" style="margin: 80px">
+        <button>Change Color</button>
+    </form>
+    
+    <script>
+        let body = document.getElementById("body");
+
+        function changeColor(){
+            for (let i = 0; i <= 10; i++) {
+                console.log("Current Background Color: " + body.style.backgroundColor); 
+                document.write("Current Background Color: " + body.style.backgroundColor + "<br>");          
+                if(i == 0){
+                    body.style.backgroundColor = "red";
+                }else if(i == 1){
+                    body.style.backgroundColor = "orange";
+                }else if(i == 2){
+                    body.style.backgroundColor = "yellow";
+                }else if(i == 3){
+                    body.style.backgroundColor = "green";
+                }else if(i == 4){
+                    body.style.backgroundColor = "blue";
+                }else if(i == 5){
+                    body.style.backgroundColor = "indigo";
+                }else if(i == 6){
+                    body.style.backgroundColor = "violet";
+                }else if(i == 7){
+                    body.style.backgroundColor = "black";
+                }else if(i == 8){
+                    body.style.backgroundColor = "white";
+                }else if(i == 9){
+                    body.style.backgroundColor = "gray";
+                }else if(i == 10){
+                    body.style.backgroundColor = "#c0ffee";
+                }else{
+                    body.style.backgroundColor = "pink";
+                }
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
